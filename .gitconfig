@@ -1,0 +1,23 @@
+[user]
+	name = Name
+	email = email@domain.com
+
+[alias]
+	grep = grep -n
+	st = status
+	stm = diff master --name-only
+	co = checkout
+	br = branch
+	ls = ls-files
+	d = diff origin/master
+
+	psh = !"git add .; git cm "-"; git push"
+	master = !"git co master; git pull;"
+	merges = !"git checkout master; git pull; git checkout -; git merge master; git push;"
+	hreset = !"git add .; git reset --hard"
+	
+[push]
+	default = simple
+
+[core]
+	filemode = false
