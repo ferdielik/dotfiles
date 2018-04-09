@@ -23,7 +23,8 @@ shopt -s checkwinsize
 
 [ "${BASH_VERSINFO[0]}" -ge 4 ] && shopt -s autocd  # stty stop ""  # check later
 
-export PS1="\t \u@\h:\$(pwd) ${BOLD} \$(git rev-parse --abbrev-ref HEAD 2>/dev/null)\n$ "
+# export PS1="\t \u@\h:\$(pwd) ${BOLD} \$(git rev-parse --abbrev-ref HEAD 2>/dev/null)\n$ "
+export PS1="${CYAN}\t ${WHITE}\u@${GREEN}\h${WHITE}:\$(pwd) ${CYAN} ${BOLD} \$(__git_prompt_info)\n${WHITE}$ ${RESET}"
 
 
 ## aliases
