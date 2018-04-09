@@ -7,6 +7,11 @@ WHITE="\[$(tput setaf 7)\]"
 GREEN="\[$(tput setaf 2)\]"
 CYAN="\[$(tput setaf 6)\]"
 
+__git_prompt_info() {
+
+	echo "$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+}
+
 ## shell config
 export HISTCONTROL=ignoreboth:erasedups
 export HISTIGNORE="&:ls:mv:rm:cp:l:[bf]g:exit"
